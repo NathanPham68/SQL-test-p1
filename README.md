@@ -40,7 +40,7 @@ GROUP BY customer_id
 a) customer_id: 101, total: 1200; customer_id: 102, total: 300  
 b) customer_id: 101, total: 500; customer_id: 102, total: 300  
 c) customer_id: 101, total: 700; customer_id: 102, total: 300  
-d) Lỗi cú pháp   
+d) Syntax error   
 
 **👉🏼 Answer & Explanation:**  
 - For customer_id = 101: amounts are 500 + 700 = 1200.  
@@ -115,7 +115,7 @@ d) `SELECT customer_id, MAX(amount) FROM Orders GROUP BY customer_id LIMIT 5`
 **👉🏼 Answer & Explanation:**  
 
 - (a) Groups by `customer_id` but does not sort by total, so it may return any 5 customers.  
-- (b) Groups by `customer_id`, calculates total, sorts by total descending, and limits to 5 → ✅ correct.  
+- (b) Groups by `customer_id`, calculates total, sorts by total descending, and limits to 5 → correct.  
 - (c) Similar to (b) but uses `TOP 5`, which is **SQL Server syntax**, not standard SQL (MySQL/Postgres require `LIMIT`).  
 - (d) Uses `MAX(amount)` instead of total, which gives only the largest single order per customer, not total.  
 
